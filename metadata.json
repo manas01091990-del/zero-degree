@@ -1,0 +1,7 @@
+{
+  "name": "ZERO DEGREES KOTA final",
+  "description": "High-end mobile-first vegetarian burger booking and ordering platform for ZERO DEGREES Kota.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
