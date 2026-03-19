@@ -96,7 +96,7 @@ const MenuPage: React.FC = () => {
       </motion.div>
 
       {/* Persistent Filters & Search */}
-      <div className="sticky top-16 md:top-20 z-40 px-4 md:px-6 py-4 bg-black/20 backdrop-blur-3xl border-b border-white/5">
+      <div className="sticky top-[72px] md:top-20 z-40 px-4 md:px-6 py-4 bg-black/20 backdrop-blur-3xl border-b border-white/5">
         <div className="space-y-4 md:space-y-6">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
@@ -286,7 +286,7 @@ const MenuPage: React.FC = () => {
                       <h4 className="text-[8px] md:text-[10px] font-black uppercase tracking-[0.4em] text-gray-600 flex items-center gap-4">
                         FUEL_PROFILE_ANALYSIS <div className="h-[1px] bg-white/5 flex-grow" />
                       </h4>
-                      <div className="grid grid-cols-2 gap-3 md:gap-4">
+                      <div className="grid grid-cols-1 xs:grid-cols-2 gap-3 md:gap-4">
                         {[
                           { label: 'ENERGY_VAL', value: selectedItem.nutrition.calories, unit: 'KCAL', color: 'text-[#00C853]', barColor: 'bg-[#00C853]', icon: <Activity size={12} />, percent: (selectedItem.nutrition.calories / 1000) * 100 },
                           { label: 'PROTEIN_VAL', value: selectedItem.nutrition.protein, unit: 'G', color: 'text-blue-400', barColor: 'bg-blue-400', icon: <Weight size={12} />, percent: (selectedItem.nutrition.protein / 50) * 100 },

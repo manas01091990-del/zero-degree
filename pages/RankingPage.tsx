@@ -49,14 +49,14 @@ const RankingPage: React.FC = () => {
         <motion.div 
           animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-[20%] left-[10%] text-[15rem] font-black italic text-white/5 select-none"
+          className="absolute top-[20%] left-[10%] text-[8rem] sm:text-[15rem] font-black italic text-white/5 select-none"
         >
           0°
         </motion.div>
         <motion.div 
           animate={{ y: [0, 20, 0], rotate: [0, -5, 0] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          className="absolute bottom-[20%] right-[10%] text-[10rem] font-black italic text-white/5 select-none"
+          className="absolute bottom-[20%] right-[10%] text-[6rem] sm:text-[10rem] font-black italic text-white/5 select-none"
         >
           0°
         </motion.div>
@@ -69,9 +69,9 @@ const RankingPage: React.FC = () => {
             initial={{ height: 0 }}
             animate={{ height: 48 }}
             transition={{ duration: 0.8 }}
-            className="w-1 bg-[#FFD700] rounded-full" 
+            className="w-1 bg-[#FFD700] rounded-full hidden sm:block" 
           />
-          <h1 className="text-6xl font-black italic tracking-tighter uppercase leading-none overflow-hidden">
+          <h1 className="text-4xl sm:text-6xl font-black italic tracking-tighter uppercase leading-none overflow-hidden">
             <motion.span 
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
@@ -107,21 +107,21 @@ const RankingPage: React.FC = () => {
         transition={{ delay: 0.5 }}
         className="px-6 mb-12"
       >
-        <div className="relative overflow-hidden bg-gradient-to-r from-[#FFD700] to-[#FF8C00] rounded-[2.5rem] p-8 text-black shadow-[0_30px_60px_rgba(255,215,0,0.25)] group hover:scale-[1.02] transition-transform duration-700">
+        <div className="relative overflow-hidden bg-gradient-to-r from-[#FFD700] to-[#FF8C00] rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-8 text-black shadow-[0_30px_60px_rgba(255,215,0,0.25)] group hover:scale-[1.02] transition-transform duration-700">
           <div className="absolute -top-10 -right-10 p-4 opacity-10 group-hover:rotate-45 transition-transform duration-1000">
-             <Trophy size={180} />
+             <Trophy size={120} className="sm:w-[180px] sm:h-[180px]" />
           </div>
           <div className="relative z-10">
             <div className="flex items-center gap-3 mb-4">
-              <span className="bg-black text-[#FFD700] text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-widest animate-pulse">ELITE ACCESS</span>
+              <span className="bg-black text-[#FFD700] text-[8px] sm:text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-widest animate-pulse">ELITE ACCESS</span>
               <div className="flex text-black/40">
-                {[1,2,3].map(i => <Star key={i} size={10} fill="currentColor" />)}
+                {[1,2,3].map(i => <Star key={i} size={8} sm:size={10} fill="currentColor" />)}
               </div>
             </div>
-            <h2 className="text-3xl font-black italic tracking-tighter uppercase leading-[0.9] mb-4">
+            <h2 className="text-2xl sm:text-3xl font-black italic tracking-tighter uppercase leading-[0.9] mb-4">
               "TOP 5 CUSTOMERS GET A FREE MEAL ON EACH ORDER"
             </h2>
-            <p className="text-black/80 text-[10px] font-extrabold uppercase tracking-widest leading-relaxed max-w-[80%]">
+            <p className="text-black/80 text-[9px] sm:text-[10px] font-extrabold uppercase tracking-widest leading-relaxed max-w-[90%] sm:max-w-[80%]">
               THE ULTIMATE KOTA FLEX. DOMINATE THE RANKINGS AND CLAIM YOUR THRONE.
             </p>
           </div>
@@ -274,20 +274,20 @@ const RankingPage: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         className="mt-16 px-6"
       >
-        <div className="bg-white/5 backdrop-blur-md rounded-[3.5rem] p-12 text-center border border-white/5 relative overflow-hidden group">
+        <div className="bg-white/5 backdrop-blur-md rounded-[2.5rem] sm:rounded-[3.5rem] p-8 sm:p-12 text-center border border-white/5 relative overflow-hidden group">
           <div className="absolute inset-0 bg-gradient-to-b from-[#00C853]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
-          <Zap className="mx-auto mb-6 text-[#00C853] group-hover:scale-125 group-hover:rotate-12 transition-transform duration-700" size={56} />
-          <h3 className="text-4xl font-black italic tracking-tighter uppercase mb-4 leading-none">DON'T BE A<br/>BYSTANDER.</h3>
-          <p className="text-gray-500 text-[10px] font-bold uppercase tracking-[0.3em] leading-relaxed mb-12 max-w-xs mx-auto">
+          <Zap className="mx-auto mb-6 text-[#00C853] group-hover:scale-125 group-hover:rotate-12 transition-transform duration-700 w-10 h-10 sm:w-14 sm:h-14" />
+          <h3 className="text-3xl sm:text-4xl font-black italic tracking-tighter uppercase mb-4 leading-none">DON'T BE A<br/>BYSTANDER.</h3>
+          <p className="text-gray-500 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.3em] leading-relaxed mb-8 sm:mb-12 max-w-xs mx-auto">
             KOTA'S MOST AGGRESSIVE FOODIES ARE DOMINATING. ORDER NOW TO OVERTHROW THEM.
           </p>
           <div className="flex flex-col gap-4">
             <Link 
               to="/menu" 
               onClick={() => playSFX(SFX_URLS.CLICK)}
-              className="inline-flex items-center justify-center bg-white text-black h-24 px-12 rounded-[2rem] font-black text-sm uppercase tracking-[0.5em] active:scale-95 transition-all shadow-[0_30px_60px_rgba(255,255,255,0.1)] hover:bg-[#00C853] hover:shadow-[0_20px_40px_rgba(0,200,83,0.3)]"
+              className="inline-flex items-center justify-center bg-white text-black h-20 sm:h-24 px-8 sm:px-12 rounded-[1.5rem] sm:rounded-[2rem] font-black text-xs sm:text-sm uppercase tracking-[0.5em] active:scale-95 transition-all shadow-[0_30px_60px_rgba(255,255,255,0.1)] hover:bg-[#00C853] hover:shadow-[0_20px_40px_rgba(0,200,83,0.3)]"
             >
-              ORDER & ASCEND <ShoppingBag className="ml-4" size={24} />
+              ORDER & ASCEND <ShoppingBag className="ml-4" size={20} sm:size={24} />
             </Link>
           </div>
         </div>

@@ -130,10 +130,10 @@ const HomePage: React.FC = () => {
                 className="mt-8 sm:mt-12 space-y-6 w-full"
               >
                 {/* Normal Way - Muted */}
-                <div className="flex flex-col items-center justify-center gap-2 text-white/20 text-[3.5vw] sm:text-[14px] md:text-base font-bold tracking-widest uppercase">
+                <div className="flex flex-col items-center justify-center gap-2 text-white/20 text-[10px] sm:text-[14px] md:text-base font-bold tracking-widest uppercase">
                   <div className="flex items-center gap-3">
                     <span className="opacity-50">🚶 Normal way:</span>
-                    <span className="flex items-center gap-2 opacity-40">Walk <ArrowRight size={14} /> Wait <ArrowRight size={14} /> Order <ArrowRight size={14} /> Wait</span>
+                    <span className="flex flex-wrap items-center justify-center gap-2 opacity-40">Walk <ArrowRight size={12} /> Wait <ArrowRight size={12} /> Order <ArrowRight size={12} /> Wait</span>
                   </div>
                 </div>
                 
@@ -147,48 +147,48 @@ const HomePage: React.FC = () => {
                   <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[#00C853]/30" />
 
                   <div className="relative flex flex-col items-center justify-center gap-4">
-                    <div className="flex items-center gap-4 text-[7vw] sm:text-3xl md:text-4xl font-black italic tracking-tighter uppercase">
-                      <Sparkles size={32} className="text-[#FFD700] animate-pulse" />
+                    <div className="flex items-center gap-4 text-[6vw] sm:text-3xl md:text-4xl font-black italic tracking-tighter uppercase">
+                      <Sparkles size={24} className="text-[#FFD700] animate-pulse sm:w-8 sm:h-8" />
                       <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00C853] via-[#FFD700] to-[#00C853] bg-[length:200%_auto] animate-pulse drop-shadow-[0_0_20px_rgba(0,200,83,0.5)]">
                         Your way:
                       </span>
-                      <Sparkles size={32} className="text-[#FFD700] animate-pulse" />
+                      <Sparkles size={24} className="text-[#FFD700] animate-pulse sm:w-8 sm:h-8" />
                     </div>
                     
-                    <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-[6vw] sm:text-2xl md:text-3xl font-black tracking-tight text-white font-mono">
+                    <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-center gap-4 sm:gap-6 text-[5vw] sm:text-2xl md:text-3xl font-black tracking-tight text-white font-mono w-full max-w-[300px] sm:max-w-none">
                       <div className="flex flex-col items-center gap-1 group">
                         <div className="flex items-center gap-2">
                           <span className="group-hover:text-[#00C853] transition-colors">Tap</span>
-                          <ArrowRight size={24} className="text-[#00C853]/50" />
+                          <ArrowRight size={18} className="text-[#00C853]/50 sm:w-6 sm:h-6" />
                         </div>
-                        <span className="text-[8px] md:text-[10px] text-[#00C853] font-black uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">Instant</span>
+                        <span className="text-[8px] md:text-[10px] text-[#00C853] font-black uppercase tracking-widest opacity-60 sm:opacity-0 group-hover:opacity-100 transition-opacity">Instant</span>
                       </div>
                       
                       <div className="flex flex-col items-center gap-1 group">
                         <div className="flex items-center gap-2">
                           <span className="group-hover:text-[#00C853] transition-colors">Study</span>
-                          <ArrowRight size={24} className="text-[#00C853]/50" />
+                          <ArrowRight size={18} className="text-[#00C853]/50 sm:w-6 sm:h-6" />
                         </div>
-                        <span className="text-[8px] md:text-[10px] text-[#FFD700] font-black uppercase tracking-widest animate-pulse">Save 20 Mins</span>
+                        <span className="text-[8px] md:text-[10px] text-[#FFD700] font-black uppercase tracking-widest animate-pulse">Save 20m</span>
                       </div>
-
+ 
                       <div className="flex flex-col items-center gap-1 group">
                         <div className="flex items-center gap-2">
                           <span className="group-hover:text-[#00C853] transition-colors">Pick</span>
-                          <ArrowRight size={24} className="text-[#00C853]/50" />
+                          <ArrowRight size={18} className="text-[#00C853]/50 sm:w-6 sm:h-6" />
                         </div>
-                        <span className="text-[8px] md:text-[10px] text-[#00C853] font-black uppercase tracking-widest">Skip Lines</span>
+                        <span className="text-[8px] md:text-[10px] text-[#00C853] font-black uppercase tracking-widest opacity-60 sm:opacity-0 group-hover:opacity-100 transition-opacity">Skip Lines</span>
                       </div>
-
+ 
                       <div className="relative flex flex-col items-center gap-1">
                         <div className="relative">
                           <span className="text-[#00C853] drop-shadow-[0_0_15px_rgba(0,200,83,0.8)] underline decoration-wavy decoration-[#FFD700] underline-offset-8">Eat</span>
                           <motion.div 
                             animate={{ scale: [1, 1.2, 1] }}
                             transition={{ duration: 2, repeat: Infinity }}
-                            className="absolute -top-4 -right-4"
+                            className="absolute -top-3 -right-3"
                           >
-                            <Zap size={20} fill="#FFD700" className="text-[#FFD700]" />
+                            <Zap size={16} fill="#FFD700" className="text-[#FFD700] sm:w-5 sm:h-5" />
                           </motion.div>
                         </div>
                         <span className="text-[8px] md:text-[10px] text-white/50 font-black uppercase tracking-widest mt-2">Win Both</span>

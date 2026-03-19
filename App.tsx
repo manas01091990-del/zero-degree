@@ -143,9 +143,9 @@ const App: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => playSFX(SFX_URLS.CLICK)}
-            className="fixed bottom-28 right-6 z-40 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all"
+            className="fixed bottom-24 sm:bottom-28 right-4 sm:right-6 z-40 bg-[#25D366] text-white p-3 sm:p-4 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all"
           >
-            <MessageCircle size={28} />
+            <MessageCircle size={24} className="sm:w-7 sm:h-7" />
           </a>
 
           {/* GLOBAL FLOATING CART BUTTON - Enhanced Visibility */}
@@ -155,11 +155,11 @@ const App: React.FC = () => {
                 initial={{ opacity: 0, y: 50, x: "-50%", scale: 0.8 }}
                 animate={{ opacity: 1, y: 0, x: "-50%", scale: 1 }}
                 exit={{ opacity: 0, y: 50, x: "-50%", scale: 0.8 }}
-                className="fixed bottom-40 left-1/2 z-[60]"
+                className="fixed bottom-32 sm:bottom-40 left-1/2 z-[60] w-[90vw] sm:w-auto"
               >
                 <button 
                   onClick={() => { playSFX(SFX_URLS.CHIME); setIsOrderDrawerOpen(true); }}
-                  className="bg-[#00C853] text-black px-12 py-6 rounded-full font-black text-sm uppercase tracking-[0.3em] shadow-[0_30px_70px_rgba(0,200,83,0.7)] flex items-center gap-5 border-2 border-white/30 hover:scale-110 active:scale-95 transition-all group relative overflow-hidden"
+                  className="w-full sm:w-auto bg-[#00C853] text-black px-6 py-4 sm:px-12 sm:py-6 rounded-full font-black text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.3em] shadow-[0_20px_50px_rgba(0,200,83,0.5)] flex items-center justify-center gap-3 sm:gap-5 border-2 border-white/30 hover:scale-105 active:scale-95 transition-all group relative overflow-hidden"
                 >
                   {/* Subtle Shimmer Effect */}
                   <motion.div 

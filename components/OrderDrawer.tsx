@@ -132,9 +132,9 @@ const OrderDrawer: React.FC<OrderDrawerProps> = ({ isOpen, onClose, defaultType 
     <div className="fixed inset-0 z-[100] flex items-end justify-center">
       <div className="absolute inset-0 bg-black/95 backdrop-blur-2xl animate-fade-in" onClick={handleClose} />
       
-      <div className="relative w-full max-w-2xl bg-[#0A0A0A] rounded-t-[4rem] p-8 pb-12 shadow-[0_-30px_100px_rgba(0,0,0,0.8)] animate-slide-up border-t border-white/10 max-h-[96vh] overflow-y-auto no-scrollbar">
+      <div className="relative w-full max-w-2xl bg-[#0A0A0A] rounded-t-[2.5rem] sm:rounded-t-[4rem] p-6 sm:p-8 pb-12 shadow-[0_-30px_100px_rgba(0,0,0,0.8)] animate-slide-up border-t border-white/10 max-h-[96vh] overflow-y-auto no-scrollbar">
         {/* HYPE BANNER */}
-        <div className="bg-[#00C853] text-black py-2 -mx-8 -mt-8 mb-8 flex overflow-hidden">
+        <div className="bg-[#00C853] text-black py-2 -mx-6 sm:-mx-8 -mt-6 sm:-mt-8 mb-8 flex overflow-hidden">
           <div className="flex animate-marquee whitespace-nowrap text-[9px] font-black uppercase tracking-[0.5em] py-1">
             {[1,2,3,4,5].map(i => (
               <span key={i} className="mx-8 flex items-center gap-2">
@@ -241,7 +241,7 @@ const OrderDrawer: React.FC<OrderDrawerProps> = ({ isOpen, onClose, defaultType 
                  <div className="flex items-center justify-between px-2">
                   <label className="text-[9px] text-gray-600 uppercase tracking-[0.3em] font-black">2. CHOOSE YOUR DROP TIME</label>
                 </div>
-                <div className="grid grid-cols-3 gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                   {timeSlots.map((slot, idx) => (
                     <button
                       key={slot}
@@ -290,7 +290,7 @@ const OrderDrawer: React.FC<OrderDrawerProps> = ({ isOpen, onClose, defaultType 
         <button 
           onClick={handleConfirm}
           disabled={!name || !phone || cart.length === 0}
-          className="w-full h-24 bg-[#00C853] text-black rounded-[2.5rem] font-black text-xl flex flex-col items-center justify-center gap-1 mt-14 shadow-[0_30px_60px_rgba(0,200,83,0.4)] disabled:opacity-20 disabled:grayscale active:scale-95 transition-all relative overflow-hidden group"
+          className="w-full h-20 sm:h-24 bg-[#00C853] text-black rounded-[2rem] sm:rounded-[2.5rem] font-black text-lg sm:text-xl flex flex-col items-center justify-center gap-1 mt-10 sm:mt-14 shadow-[0_30px_60px_rgba(0,200,83,0.4)] disabled:opacity-20 disabled:grayscale active:scale-95 transition-all relative overflow-hidden group"
         >
           <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
           <div className="relative z-10 flex items-center gap-4">
